@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de ThinkPad Laptop</title>
+    <style>
+        body {
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #931b1b;
+        }
+        .header {
+            background-color: #030405;
+            color: rgb(111, 27, 27);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgb(2, 1, 1);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(3, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #590a03;
+        }
+        img {
+            width: 80%;
+            max-width: 80px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 18px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        EL MEJOR PERSONAJE
+    </div>
+    <div class="container">
+        <h2>MODELO DE FIGURA DE AKATSUKI</h2>
+        
+        <button onclick="prevImage()">Atrás</button>
+        <img id="myImage" src="imagenes/imagen 1.png" alt="Imagen de ThinkPad">
+        <button onclick="nextImage()">Frente</button><br>
+        <button onclick="nextImage()">Delado</button>
+        
+        <br>
+        
+        <p id="demo2">PRECIO DE LA FIGURA ES DE $3500</p>
+        <button id="togglePriceBtn" type="button" onclick="togglePrice()">VER PRECIO!</button> <br>
+
+        <p id="demo3" style="display:none;">
+            Itachi es una persona misteriosa, ya que no acaba de mostrar su verdadera personalidad. También es compasivo y tiene muy buen corazón. Es muy valiente y cuenta con un increíble control de sus emociones, mostrando siempre una personalidad carente de ellas. 
+        </p>
+        
+        <button type="button" onclick="toggleSpecs()">Mostrar/Ocultar Características</button>
+
+        <h2>MÁS IMÁGENES DE LOS PERSONAJE DE AKATSUKI</h2>
+        <img id="clickableImage" src="imagenes/imagen 4.png" alt="Imagen clickeable" onclick="changeClickableImage()">
+    </div>
+
+    <script src="java.js"></script>
+    <script>
+        // Toggle price visibility
+        function togglePrice() {
+            const demo2 = document.getElementById('demo2');
+            const button = document.getElementById('togglePriceBtn');
+            if (demo2.style.display === 'none') {
+                demo2.style.display = 'block';
+                button.textContent = 'OCULTAR PRECIO!';
+            } else {
+                demo2.style.display = 'none';
+                button.textContent = 'VER PRECIO!';
+            }
+        }
+
+        // Toggle specifications visibility
+        function toggleSpecs() {
+            const demo3 = document.getElementById('demo3');
+            demo3.style.display = (demo3.style.display === 'none') ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
